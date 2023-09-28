@@ -38,18 +38,18 @@ export default function NewPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <section className="h-screen flex items-center justify-center">
-      <form onSubmit={onSubmit}>
+    <section className="h-[calc(100vh-7rem)] flex items-center justify-center">
+      <form className="w-1/4" onSubmit={onSubmit}>
         <input
           {...register("title")}
           type="text"
           placeholder="Escribe un título"
-          className="px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-black block mb-2"
+          className="px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-black block mb-2 w-full"
         />
 
         <textarea
           {...register("description")}
-          placeholder="Write a description"
+          placeholder="Escribe una description"
           className="px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-black block w-full"
         ></textarea>
 
